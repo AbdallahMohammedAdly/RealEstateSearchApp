@@ -3,12 +3,15 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage ": "https://github.com/AbdallahMohammedAdly/RealEstateSearchApp.git",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "homepage ": "https://github.com/AbdallahMohammedAdly/RealEstateSearchApp.git"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+    
   },
   "dependencies": {
     "@googlemaps/js-api-loader": "^1.16.6",
