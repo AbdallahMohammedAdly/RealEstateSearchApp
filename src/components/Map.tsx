@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { Loader } from '@googlemaps/js-api-loader';
 import { useSelector, useDispatch } from 'react-redux';
 import { setSelectedProperty } from '../store/propertySlice';
-import { Property } from '../types/Property';
+import { Property } from '../types/property'; 
 import { RootState } from '../store/store';
 
 
@@ -16,14 +16,14 @@ const Map: React.FC = () => {
 
   useEffect(() => {
     const loader = new Loader({
-      apiKey: 'YOUR_GOOGLE_MAPS_API_KEY',
+      apiKey: 'AIzaSyDY3LXRDoSr9Hqp0XKk1XcD4SgVeh2dAVA',
       version: 'weekly'
     });
 
     loader.load().then(() => {
       if (mapRef.current) {
         const map = new google.maps.Map(mapRef.current, {
-          center: { lat: 40.7128, lng: -74.0060 },
+          center: { lat: 30.1553672, lng: 31.6322497 },
           zoom: 13
         });
 
